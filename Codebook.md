@@ -1,7 +1,7 @@
 # Getting and Cleaning Data
 ## Course project codebook
 
-The run_analysis.R script performs the following steps:
+The run_analysis.R script performs the following tasks:
 
 * Checks if the CourseProject folder exists under the work directory. If not, creates the folder.
 * Downloads the data for the project 
