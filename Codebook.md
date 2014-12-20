@@ -25,6 +25,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 		* "Subject" for subject column.
 		* Data contains 561 columns. The names for each of them can be found in common.features (common.features$V2)
 	* Combines the merge.Activity, merge.Subject and merge.Data by columns using the cbind function and the result is stored in MergedData.
+	* MergedData contains 10299 observations of 563 variables.
 * Extracts only the measurements on the mean and standard deviation for each measurement
   * Takes all the features that include "mean()" or "std()" in their names. The script uses the data stored in common.features$V2 and the grep function. The result is stored in SelectedFeaturesNames.
 	* "ActivityCode" and "Subject" are added to SelectedFeaturesNames.
@@ -36,10 +37,12 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 	* Removes ActivityCode from CleanedData
 * Appropriately labels the data set with descriptive variable names
   * Some names in CleanedData contain abbreviations that are difficult to understand. The script puts the right words instead of the abbreviations. It uses the names and gsub functions.
-	* Saves the CleanedData set in a text file named "CleanedDataSet.txt"
+  * Saves the CleanedData set in a text file named "CleanedDataSet.txt"
+  * CleanedData contains 10299 observations of 68 variables.
 * Creates the tidy data set
   * Uses the library "plyr"
 	* Calculates the average of each variable for each activity and each subject by using the ddply function. Stores the result in TidyData
 	* Sorts the data stored in TidyData by activity and subject using the order function.
 	* Saves the TidyData set in a text file named "TidyDataSet.txt"	
+	* TidyData contains 180 observations of 68 variables.
 
