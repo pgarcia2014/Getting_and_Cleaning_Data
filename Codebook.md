@@ -1,5 +1,5 @@
 # Getting and Cleaning Data
-## Course Project CodeBook
+## Course project codebook
 
 The run_analysis.R script performs the following steps:
 
